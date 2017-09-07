@@ -35,6 +35,7 @@ end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem "shopify_api"
 gem 'execjs'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass'
