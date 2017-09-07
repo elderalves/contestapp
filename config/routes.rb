@@ -1,4 +1,5 @@
 ShopifyContestapp::Application.routes.draw do
+  resources :accounts
   get "dashboard/index"
 
   root "dashboard#index"
