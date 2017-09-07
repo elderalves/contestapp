@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
-rudby 2.1.2
+gem 'rails', '4.2.8'
+ruby "2.4.1"
+
 group :production do
   gem "rails_12factor"
   gem "pg"
@@ -10,7 +11,26 @@ end
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
+  
   gem 'sqlite3'
+
+  #Helpful gems
+  gem "better_errors" # improves error handling
+  gem "binding_of_caller" # used by better errors
+
+  # Testing frameworks
+  gem "rspec-rails" # testing framework
+  gem "factory_girl_rails" # use factories, not fixtures
+  gem "capybara" # simulate browser activity
+  gem "fakeweb"
+
+  # Automated testing
+  gem "guard" # automated execution of test suite upon change
+  gem "guard-rspec" # guard integration with rspec
+
+  # Only install the rb-fsevent gem if on Mac OSX
+  gem "rb-fsevent" # used for Growl notifications
+
 end
 
 # Use SCSS for stylesheets
